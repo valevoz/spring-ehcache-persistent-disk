@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.v5k'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    springBootVersion = '2.0.3.RELEASE'
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: "${springBootVersion}"
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version: "${springBootVersion}"
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: "${springBootVersion}"
+
+    compile group: 'org.ehcache', name: 'ehcache', version: '3.5.2'
+    compile group: 'javax.cache', name: 'cache-api', version: '1.1.0'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
